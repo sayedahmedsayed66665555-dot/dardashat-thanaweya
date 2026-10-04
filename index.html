@@ -3,121 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>دردشات الثانوية العامة</title>
 
 <style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#111;
-    color:white;
-    text-align:center;
+*{
+  box-sizing:border-box;
 }
 
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#0b141a;
+  color:#fff;
+}
+
+.app{
+  max-width:600px;
+  margin:auto;
+  min-height:100vh;
+  background:#111b21;
+  position:relative;
+  padding-bottom:75px;
+}
+
+/* الهيدر */
 header{
-    padding:30px 15px;
-    background:#222;
+  background:#202c33;
+  padding:18px 16px 12px;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 .logo{
-    font-size:55px;
-    font-weight:bold;
-    color:#4da6ff;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#25d366;
+  color:#071b12;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  font-weight:bold;
 }
 
-h1{
-    margin:5px 0;
-    font-size:28px;
+.title{
+  flex:1;
+  margin-right:12px;
 }
 
-.subtitle{
-    color:#ccc;
+.title h1{
+  margin:0;
+  font-size:21px;
 }
 
-.buttons{
-    padding:25px 15px;
+.title p{
+  margin:4px 0 0;
+  color:#aebac1;
+  font-size:13px;
 }
 
-button{
-    display:block;
-    width:90%;
-    max-width:400px;
-    margin:15px auto;
-    padding:18px;
-    border:0;
-    border-radius:15px;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-    background:#222;
-    color:white;
+.search{
+  margin-top:14px;
+  background:#2a3942;
+  border-radius:10px;
+  padding:10px 14px;
+  color:#aebac1;
 }
 
-button:hover{
-    background:#333;
+.search input{
+  width:100%;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:white;
+  font-size:15px;
+  text-align:right;
 }
 
-#message{
-    margin:20px;
-    padding:15px;
-    border-radius:12px;
-    background:#1d1d1d;
-    color:#4da6ff;
-    display:none;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-
-<div class="logo">S</div>
-
-<h1>دردشات الثانوية العامة</h1>
-
-<p class="subtitle">
-مكانك للتعلم والدردشة والمراجعة 📚
-</p>
-
-</header>
-
-<div class="buttons">
-
-<button onclick="showMessage('💬 الدردشات — قريبًا هتقدر تبدأ محادثات مع أصحابك')">
-💬 الدردشات
-</button>
-
-<button onclick="showMessage('👥 المجموعات — قريبًا هتقدر تعمل وتنضم لمجموعات')">
-👥 المجموعات
-</button>
-
-<button onclick="showMessage('🤖 المساعد التعليمي — قريبًا هيساعدك في المذاكرة')">
-🤖 المساعد التعليمي
-</button>
-
-<button onclick="showMessage('📚 المراجعة — قريبًا هتلاقي مواد وأسئلة للمراجعة')">
-📚 المراجعة
-</button>
-
-</div>
-
-<div id="message"></div>
-
-<script>
-
-function showMessage(text){
-
-    const message = document.getElementById("message");
-
-    message.innerText = text;
-
-    message.style.display = "block";
-
+/* المحتوى */
+.content{
+  padding:8px 0;
 }
 
-</script>
+.page{
+  display:none;
+}
 
-</body>
-  </html>
+.page.active{
+  display:block;
+}
+
+.section-title{
+  padding:14px 18px 8px;
+  color:#25d366;
+  font-size:15px;
+  font-weight:bold;
+}
+
+/* المحادثات */
+.chat{
+  display
