@@ -2,24 +2,122 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>دردشات الثانوية العامة</title>
+
 <style>
-body{margin:0;font-family:Arial;background:#111;color:white;text-align:center}
-header{padding:25px;background:#222}
-h1{margin:0;font-size:28px}
-button{padding:15px 25px;margin:10px;border:0;border-radius:12px;font-size:17px}
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#111;
+    color:white;
+    text-align:center;
+}
+
+header{
+    padding:30px 15px;
+    background:#222;
+}
+
+.logo{
+    font-size:55px;
+    font-weight:bold;
+    color:#4da6ff;
+}
+
+h1{
+    margin:5px 0;
+    font-size:28px;
+}
+
+.subtitle{
+    color:#ccc;
+}
+
+.buttons{
+    padding:25px 15px;
+}
+
+button{
+    display:block;
+    width:90%;
+    max-width:400px;
+    margin:15px auto;
+    padding:18px;
+    border:0;
+    border-radius:15px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    background:#222;
+    color:white;
+}
+
+button:hover{
+    background:#333;
+}
+
+#message{
+    margin:20px;
+    padding:15px;
+    border-radius:12px;
+    background:#1d1d1d;
+    color:#4da6ff;
+    display:none;
+}
 </style>
 </head>
+
 <body>
+
 <header>
+
+<div class="logo">S</div>
+
 <h1>دردشات الثانوية العامة</h1>
-<p>مكانك للتعلم والدردشة والمراجعة 📚</p>
+
+<p class="subtitle">
+مكانك للتعلم والدردشة والمراجعة 📚
+</p>
+
 </header>
-<h2>أهلاً بيك 👋</h2>
-<button>💬 الدردشات</button>
-<button>👥 المجموعات</button>
-<button>🤖 المساعد التعليمي</button>
-<button>📚 المراجعة</button>
+
+<div class="buttons">
+
+<button onclick="showMessage('💬 الدردشات — قريبًا هتقدر تبدأ محادثات مع أصحابك')">
+💬 الدردشات
+</button>
+
+<button onclick="showMessage('👥 المجموعات — قريبًا هتقدر تعمل وتنضم لمجموعات')">
+👥 المجموعات
+</button>
+
+<button onclick="showMessage('🤖 المساعد التعليمي — قريبًا هيساعدك في المذاكرة')">
+🤖 المساعد التعليمي
+</button>
+
+<button onclick="showMessage('📚 المراجعة — قريبًا هتلاقي مواد وأسئلة للمراجعة')">
+📚 المراجعة
+</button>
+
+</div>
+
+<div id="message"></div>
+
+<script>
+
+function showMessage(text){
+
+    const message = document.getElementById("message");
+
+    message.innerText = text;
+
+    message.style.display = "block";
+
+}
+
+</script>
+
 </body>
   </html>
